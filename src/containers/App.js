@@ -4,8 +4,11 @@ import {registerAction, loginAction} from '../redux/action/users';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Header from "../components/Index/Header"
+import TestComponents from '../components/testComponents'
 import './App.css';
 
+
+let data = '123';
 class App extends Component {
   render() {
     return (
@@ -23,13 +26,22 @@ class App extends Component {
                   </div>
                   <div className="sidebar">
                       sidebar
+                      <TestComponents title={data}/>
                   </div>
               </div>
           </div>
+          {
+              React.Children.map(this.props.children, function (child) {
+                 console.log(child+'sss');
+              })
+          }
       </div>
     );
   }
 }
+
+
+
 
 export default connect(
     (state) => {
