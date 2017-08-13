@@ -7,11 +7,27 @@ import {Button, Input, Menu} from "element-react";
 
 export default class TestComponents extends Component {
 
-    propTypes: {
-            title:React.PropTypes.string.isRequired
-        }
-    render() {
-        return <h1>hello world {this.props.title}</h1>
+    constructor(props) {
+        super(props);
+        this.state = {liked:false}
     }
 
+    handleIconClick = () => {
+        console.log('click');
+        this.setState({liked: !this.state.liked});
+    };
+
+    render() {
+        var text = this.state.liked ? 'like' : 'haven\'t liked';
+        return(
+        <div>
+            <p onClick={this.handleIconClick}>
+                You {text} this. Click to toggle.
+            </p>
+        </div>)
+    }
 }
+
+TestComponents.defaultProps = {
+    title: 'terence'
+};

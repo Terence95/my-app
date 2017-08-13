@@ -8,7 +8,7 @@ import TestComponents from '../components/testComponents'
 import './App.css';
 
 
-let data = '123';
+// let data = '123';
 class App extends Component {
   render() {
     return (
@@ -26,7 +26,7 @@ class App extends Component {
                   </div>
                   <div className="sidebar">
                       sidebar
-                      <TestComponents title={data}/>
+                      <TestComponents/>
                   </div>
               </div>
           </div>
@@ -39,6 +39,7 @@ class App extends Component {
     );
   }
 }
+
 
 
 
