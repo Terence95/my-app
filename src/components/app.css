@@ -6,3 +6,58 @@
     left:0;
     background-color: #fff;
 }
+
+.header-wrap {
+    width:100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #24292e;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height:24px;
+    overflow: hidden;
+    width:67px;
+    float: left;
+    margin-left: 15px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+    border-right: 1px solid orange;
+    margin: 18px 30px;
+    padding-right: 0px;
+    line-height: 24px;
+    animation: typing 2.5s steps(40, end), blink-caret .55s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0px }
+    to { width: 60px; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.head-nav {
+    overflow: hidden;
+    float: right;
+    margin-right: 5px;
+    list-style: none;
+    margin: 0px;
+    padding: 0 40px;
+}
+
+.head-nav li {
+    float: left;
+}
+
+.head-nav li a {
+    display: block;
+    color: #c5def5;
+    padding: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    height: inherit;
+}
