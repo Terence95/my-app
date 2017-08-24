@@ -4,7 +4,6 @@ import {registerAction, loginAction} from '../redux/action/users';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Header from "../components/Index/Header"
-import TestComponents from '../components/testComponents'
 import './App.css';
 
 
