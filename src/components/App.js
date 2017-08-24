@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import Head from './Head'
 
+import './App.css'
+
 class Root extends React.Component {
     // 构造
       constructor(props) {
@@ -29,6 +31,9 @@ class Root extends React.Component {
     }
     
     render() {
+        const layer = this.props.isShowLayer
+        const editer = this.props.isShowEditer
+
         return (
             <div className="App">
                 <Head></Head>
@@ -37,5 +42,16 @@ class Root extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state, ownProps) => ({
+    isShowLayer: state.isShowLayer,
+    isShowEditer: state.isShowEditer
+})
+
+const App = connect(
+    mapStateToProps
+)(Root)
+
+export default App
 
 
