@@ -1,2 +1,8 @@
-import { ADD_NOTE, DELETE_NOTE, SHOW_NOTE, SHOW_LAYER, SHOW_EDITER } from '../constants'
-import {setStorage, getStorage} from '../utils/storage'
+export const setStorage = (key, value) => {
+    if (!window.localStorage) return alert('sorry, your client do not support local storage');
+    localStorage.setItem(key, value);
+}
+
+export const getStorage = (key) => {
+    return localStorage.getItem(key);
+}
