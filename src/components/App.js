@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Head from './Head'
+import ContainerList from '../containers/ContainerList';
 
 import './App.css'
 
@@ -37,7 +38,9 @@ class Root extends React.Component {
         return (
             <div className="App">
                 <Head></Head>
-                <main></main>
+                <main>
+                    <ContainerList></ContainerList>
+                </main>
             </div>
         )
     }

@@ -26,7 +26,7 @@ if (notesArr instanceof Array && notesArr.length !== 0) {
 
 // 增加一篇笔记 或者 编辑之后保存
 // 这个addNote是一个Action Creator
-export const addNote = function (title, content, id, time) => {
+export const addNote = (title, content, id, time) => {
     if (id === undefined && time === undefined) {
         return {
             type: ADD_NOTE,
@@ -45,5 +45,29 @@ export const addNote = function (title, content, id, time) => {
         }
     }
 }
+
+// 预览一篇笔记
+export const showNote = (id) => {
+    return {
+        type: SHOW_NOTE,
+        id
+    }
+}
+
+export const showLayer = (isShowLayer) => {
+    return {
+        type: SHOW_LAYER,
+        isShowLayer
+    }
+}
+
+export const showEditer = (isShowEditer) => {
+    return {
+        type: SHOW_NOTE,
+        isShowEditer
+    }
+}
+
+
 
 
