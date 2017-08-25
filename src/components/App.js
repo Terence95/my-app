@@ -5,6 +5,7 @@ import Head from './Head'
 import ContainerList from '../containers/ContainerList';
 
 import './App.css'
+import '../index.css'
 
 class Root extends React.Component {
     // 构造
